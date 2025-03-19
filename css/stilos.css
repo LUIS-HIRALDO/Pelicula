@@ -1,130 +1,144 @@
-*{margin: 0;
+/* Reiniciar márgenes y establecer el box-sizing para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-
 }
 
-body{
-background-color: rgb(32, 32, 32);
-
-}
-
-
-
-.Main{   
-background-color: rgb(53, 51, 51);
-color: rgb(198, 199, 201);
-padding: 10px;
-display: grid;
-grid-template-columns: repeat(2,50% ) ;
-
-}
-
-
-
-.rotacion img{
-width: 100px;
-height: 100px;
-
-}
-
-.CajaMenu ul{
-list-style: none;
-}
-.CajaMenu ul li{
-display: inline-block;
-margin: 0 10px;
-padding: 10px;
-}
-
-.CajaMenu ul li a{
-text-decoration: none;
-color: rgb(238, 241, 243);
-
-}
-
-
-.conteiner .caja img {
-    transition: opacity 0.6s ease; }
-
-    .conteiner:hover  img {
-        opacity: 0.4;}
-        .conteiner .caja img:hover {
-            opacity: 1; }
-
-
-.conteiner{
-
-  margin:auto ;
-width: 80%;
-height: 1000px;
-
-display: grid;
-grid-template-columns: 200px 200px 200px 200px 200px 200px  ;
-gap: 5px;
-grid-template-rows: repeat(3, 300px);
-justify-content: center;
-
-}
-
-
-
-.nulo{height: 70px;
-text-align: center;
-margin: 1%;
-color: rgb(201, 204, 206);
-font-size: 30px;
-}
-
-
-
-.caja{
-background-color: rgb(29, 40, 41);
-width: 200px;
-height: 300px;
-
-
-
-}
-.conteiner img{
-width: 200px;
-height: 300px;
-border: 5px;
-border-color: darkred;
-
-}
-
-
-.final{
-    background-color: rgb(53, 51, 51);
+/* Estilos generales del cuerpo */
+body {
+    background-color: rgb(32, 32, 32);
     color: rgb(198, 199, 201);
-    padding: 10px;
-    display: grid;
-    grid-template-columns: 100px 600px;
-
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
-
-
-.copyright{
-    padding: 10%;
-display: flex;
-width: 600px;
-height:30px ;
-grid-template-columns: 100px 600px 200px;
-list-style: none;
-
-
+/* Contenedor principal */
+.Main {
+    background-color: rgb(53, 51, 51);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.copyright a{
+/* Título principal */
+.cajaTitulo h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Navegación principal */
+.CajaMenu ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+
+.CajaMenu ul li {
+    margin: 0.5rem;
+}
+
+.CajaMenu ul li a {
     text-decoration: none;
-color: rgb(238, 241, 243);
+    color: rgb(238, 241, 243);
+    font-size: 1rem;
 }
 
-i{
-    
-    background-color: blue;
-
-
+/* Rotación de imágenes */
+.rotacion {
+    overflow: hidden;
+    width: 100%;
+    margin: 1rem 0;
 }
 
+.rotacion img {
+    width: 100px;
+    height: 100px;
+    margin: 0 0.5rem;
+}
+
+/* Contenedor de las cajas de contenido */
+.conteiner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    width: 90%;
+    margin: auto;
+}
+
+/* Estilos de cada caja */
+.caja {
+    background-color: rgb(29, 40, 41);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.caja:hover {
+    transform: scale(1.05);
+}
+
+.caja img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Pie de página */
+.final {
+    background-color: rgb(53, 51, 51);
+    padding: 1rem;
+    text-align: center;
+}
+
+.copyright {
+    color: rgb(198, 199, 201);
+    font-size: 0.875rem;
+}
+
+.copyright a {
+    text-decoration: none;
+    color: rgb(238, 241, 243);
+    margin: 0 0.5rem;
+}
+
+/* Media Queries para diferentes tamaños de pantalla */
+@media (min-width: 600px) {
+    .cajaTitulo h1 {
+        font-size: 2.5rem;
+    }
+
+    .CajaMenu ul li a {
+        font-size: 1.125rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .Main {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .rotacion img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .cajaTitulo h1 {
+        font-size: 3rem;
+    }
+
+    .CajaMenu ul li a {
+        font-size: 1.25rem;
+    }
+
+    .rotacion img {
+        width: 150px;
+        height: 150px;
+    }
+}
