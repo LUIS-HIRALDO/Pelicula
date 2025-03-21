@@ -1,11 +1,11 @@
-/* Reiniciar márgenes y establecer el box-sizing para todos los elementos */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilos generales del cuerpo */
+
 body {
     background-color: rgb(32, 32, 32);
     color: rgb(198, 199, 201);
@@ -13,7 +13,7 @@ body {
     line-height: 1.6;
 }
 
-/* Contenedor principal */
+
 .Main {
     background-color: rgb(53, 51, 51);
     padding: 1rem;
@@ -22,13 +22,13 @@ body {
     align-items: center;
 }
 
-/* Título principal */
+
 .cajaTitulo h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
 }
 
-/* Navegación principal */
+
 .CajaMenu ul {
     list-style: none;
     display: flex;
@@ -47,7 +47,7 @@ body {
     font-size: 1rem;
 }
 
-/* Rotación de imágenes */
+
 .rotacion {
     overflow: hidden;
     width: 100%;
@@ -60,18 +60,19 @@ body {
     margin: 0 0.5rem;
 }
 
-/* Contenedor de las cajas de contenido */
+
 .conteiner {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 1rem;
     width: 90%;
     margin: auto;
+    padding-bottom: 10px;
 }
 
-/* Estilos de cada caja */
+
 .caja {
-    background-color: rgb(29, 40, 41);
+   
     border-radius: 0.5rem;
     overflow: hidden;
     transition: transform 0.3s ease;
@@ -82,12 +83,15 @@ body {
 }
 
 .caja img {
+    border-radius: 10px;
+    border: 2px solid rgb(33, 74, 90);
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
 }
 
-/* Pie de página */
+
+
 .final {
     background-color: rgb(53, 51, 51);
     padding: 1rem;
@@ -105,12 +109,11 @@ body {
     margin: 0 0.5rem;
 }
 
-/* Media Queries para diferentes tamaños de pantalla */
+
 @media (min-width: 600px) {
     .cajaTitulo h1 {
         font-size: 2.5rem;
     }
-
     .CajaMenu ul li a {
         font-size: 1.125rem;
     }
